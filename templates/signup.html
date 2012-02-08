@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+App Engine Skeleton - Contact Demo
+{% endblock %}
+
+{% block main %}
+
+<h1>A sign-up page</h1>
+
+<form action="{{ post_action }}" method="post" class="demo">
+    <div>
+        Name:<br/>
+        <input type="text" name="name" />
+    </div>
+    <div>
+        <input type="checkbox" name="veg" value="true"/> Vegetarian?
+    </div>
+    <div>
+        <input type="submit" value="Sign up">
+    </div>
+</form>
+        
+<h1>Signed-up so far:</h1>
+
+<ul>
+{% for g in guests %}
+  <li>
+      {{ g.date.strftime('%Y-%m-%d') }}
+      {{ g.name|e }}
+      {% if g.vegetarian %}(vegetarian){% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
