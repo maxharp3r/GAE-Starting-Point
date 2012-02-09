@@ -1,1 +1,10 @@
 A google app engine skeleton project.
+
+Commands (run from project root):
+
+* Run the dev server: `/path/to/dev_appserver.py .`
+* Upload your app: `/path/to/appcfg.py update .`
+
+Create a new application id:
+
+* http://appengine.google.com
